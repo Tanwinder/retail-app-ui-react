@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "esModuleInterop": true, //esModuleInterop — the flag fixes default and namespace imports from CommonJS to TS. That's just needed 
+      "jsx": "react",  // jsx - tells TS how to treat JSX files
+      "module": "esnext",  // module — the option tells TS how to transpile ES6 imports and exports; esnext leaves them unchanged. I recommend setting always esnext to leave this job to webpack.
+      "moduleResolution": "node", //moduleResolution — historically TS used to resolve modules in other way than Node.js, so this must be set to node
+      "lib": [  //lib — this option tells TS which libraries will exist in your target environment, so TS implicitly imports their types. TS won't be able to check if these libs really exist in runtime, so that's your promise. More on this later.
+        "dom",
+        "esnext"
+      ],
+      "strict": true, //strict — enables all TS type checks
+      "sourceMap": true, // sourceMap — enables TS emitting source maps. We will configure webpack to ignore source maps in production builds.
+      "target": "esnext",  // target — configures target ES version which depends on your users; more on this later.
+    },
+    "exclude": [  // exclude — this option excludes libs from typechecking and transpiling; however your code is still checked against typedefs provided by libs.
+      "node_modules"
+    ]
+  }
