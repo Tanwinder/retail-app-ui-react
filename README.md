@@ -31,18 +31,35 @@ UI of the retail-app with react redux
 
 14. Add pollyfills for old browsers
     -- npm i core-js raf whatwg-fetch
+15. storybook ✅
+
+- via npx sb init --builder webpack5 ✅
+
+16. jest + react-test-library ✅
+
+- 100% coverage and pass limits ✅
+- html coverage report ✅
+
+17. lint-staged 👇
+
+- ensure tests are run, but only on changed files ✅
+- eslint fix ✅
+- prettier format ✅
+- commit lint 👈
 
 # --------- Happy Coding ---------
 
 # Extensions:-
+
 https://blog.logrocket.com/9-essential-vs-code-extensions-typescript/
+
 1. npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint typescript
    ---npm init @eslint/config
 2. TypeScript Toolbox
-3. TypeScript Importer 
+3. TypeScript Importer
 4. ponicode
 5. codemetrics
 6. Better Comments
 7. Tabnine AI Autocomplete
-8. GitLens 
+8. GitLens
 9. prettier in project - npm install prettier -D --save-exact

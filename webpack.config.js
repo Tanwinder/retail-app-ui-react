@@ -1,4 +1,3 @@
-
 // Setting a NODE_ENV var is the typical way of setting a dev/prod mode.
 // HtmlWebpackPlugin generates index.html from a template which we are going to create shortly
 // MiniCssExtractPlugin extracts styles to a separate file which otherwise remain in index.html
@@ -32,11 +31,35 @@ module.exports = {
         },
         use: 'ts-loader',
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
       // {
       //   test: /\.css$/,
       //   use: [MiniCssExtractPlugin.loader, 'css-loader'],
       // },
-    ]
+    ],
+  },
+  // module: {
+  //   rules: [
+  //     {
+  //       test: /\.(js|jsx|ts|tsx)$/,
+  //       exclude: /node_modules/,
+  //       loader: 'babel-loader',
+  //     },
+
+  //   ],
+  // },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+    alias: {
+      '@mui/styled-engine': '@mui/styled-engine-sc',
+    },
   },
   devtool: prod ? undefined : 'source-map',
   plugins: [
