@@ -33,3 +33,16 @@ UI of the retail-app with react redux
     -- npm i core-js raf whatwg-fetch
 
 # --------- Happy Coding ---------
+
+# Extensions:-
+https://blog.logrocket.com/9-essential-vs-code-extensions-typescript/
+1. npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint typescript
+   ---npm init @eslint/config
+2. TypeScript Toolbox
+3. TypeScript Importer 
+4. ponicode
+5. codemetrics
+6. Better Comments
+7. Tabnine AI Autocomplete
+8. GitLens 
+9. prettier in project - npm install prettier -D --save-exact
